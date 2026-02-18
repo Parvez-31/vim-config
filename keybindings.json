@@ -1,13 +1,135 @@
 // Place your key bindings in this file to override the defaults
+
 [
+  /* =========================
+     FILE & EXPLORER
+  ========================== */
   {
     "key": "alt+j",
     "command": "editor.action.moveLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly"
+    "when": "editorTextFocus && neovim.mode == normal && !editorReadonly",
   },
   {
     "key": "alt+k",
     "command": "editor.action.moveLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly"
-  }
+    "when": "editorTextFocus && neovim.mode == normal && !editorReadonly",
+  },
+  {
+    "key": "space e",
+    "command": "workbench.view.explorer",
+    "when": "editorTextFocus && neovim.mode == normal",
+  },
+  {
+    "key": "space e",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "explorerViewletVisible && neovim.mode == normal",
+  },
+  {
+    "key": "space f",
+    "command": "workbench.action.quickOpen",
+    "when": "neovim.mode == normal",
+  },
+  // {
+  //   "key": "space s",
+  //   "command": "workbench.action.findInFiles",
+  //   "when": "neovim.mode == normal",
+  // },
+  {
+    "key": "space p",
+    "command": "workbench.action.showCommands",
+    "when": "editorTextFocus && neovim.mode == normal",
+  },
+  {
+    "key": "space b",
+    "command": "workbench.action.showAllEditors",
+    "when": "editorTextFocus && neovim.mode == normal",
+  },
+  /* =========================
+     TERMINAL (🔥 YOU ASKED)
+  ========================== */
+
+  /* =========================
+     WINDOW / EDITOR CONTROL
+  ========================== */
+  {
+    "key": "space w q",
+    "command": "workbench.action.closeActiveEditor",
+    "when": "editorTextFocus && neovim.mode == normal",
+  },
+
+  {
+    "key": "space w o",
+    "command": "workbench.action.closeOtherEditors",
+    "when": "editorTextFocus && neovim.mode == normal",
+  },
+  {
+    "key": "space w s",
+    "command": "workbench.action.files.save",
+    "when": "neovim.mode == normal",
+  },
+  // ELITE ADDITIONS
+  // Quick buffer switch (MRU)
+  {
+    "key": "space tab",
+    "command": "workbench.action.quickOpenPreviousRecentlyUsedEditor",
+    "when": "neovim.mode == normal",
+  },
+
+  // Find in current file
+
+  {
+    "key": "space /",
+    "command": "actions.find",
+    "when": "neovim.mode == normal",
+  },
+
+  // Go to symbol (functions, classes)
+
+  {
+    "key": "space o",
+    "command": "workbench.action.gotoSymbol",
+    "when": "neovim.mode == normal",
+  },
+  //Close all editors
+
+  {
+    "key": "space w c",
+    "command": "workbench.action.closeAllEditors",
+    "when": "neovim.mode == normal",
+  },
+
+  // Reload VS Code (lifesaver)
+
+  {
+    "key": "space r",
+    "command": "workbench.action.reloadWindow",
+    "when": "neovim.mode == normal",
+  },
+  //comments
+  {
+    "key": "g c",
+    "command": "editor.action.commentLine",
+    "when": "editorTextFocus && neovim.mode == 'visual'",
+  },
+  {
+    "key": "g c c",
+    "command": "editor.action.commentLine",
+    "when": "editorTextFocus && neovim.mode == 'normal'",
+  },
+  {
+    "key": "space 1",
+    "command": "workbench.action.focusFirstEditorGroup",
+    "when": "editorTextFocus && neovim.mode == 'normal'",
+  },
+  {
+    "key": "space 2",
+    "command": "workbench.action.focusSecondEditorGroup",
+    "when": "editorTextFocus && neovim.mode == 'normal'",
+  },
+  {
+    "key": "space 3",
+    "command": "workbench.action.focusThirdEditorGroup",
+    "when": "editorTextFocus && neovim.mode == 'normal'",
+  },
 ]
+
