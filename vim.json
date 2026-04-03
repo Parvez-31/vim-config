@@ -1,24 +1,6 @@
 {
-  "vim.useSystemClipboard": true,
-  "vim.hlsearch": true,
-  "vim.incsearch": true,
-  "vim.smartcase": true,
-  "vim.insertModeKeyBindings": [
-    {
-      "before": ["j", "j"],
-      "after": ["<Esc>"]
-    }
-  ],
-  "vim.leader": " ",
-
-  "vim.handleKeys": {
-    "<C-b>": false,
-    "<C-a>": false,
-    "<C-f>": false,
-    "<C-c>": false,
-    "<C-h>": false,
-    "<C-w>": false
-  }
+  "vscode-neovim.compositeKeys": {
+    "jj": {
+      "command": "vscode-neovim.escape",
+    },
 }
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
